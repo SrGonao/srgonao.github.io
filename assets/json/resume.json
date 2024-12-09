@@ -1,12 +1,10 @@
 {
   "basics": {
-    "name": "Gonçalo Paulo",
-    "label": "Mechanist Interpretability researcher",
-    "image": "",
+    "Name": "Gonçalo Paulo",
+    "jobTitle": "Interpretability Researcher",
     "email": "goncalo.paulo@eleuther.ai",
-    "phone": "",
     "url": "https://srgonao.github.io",
-    "summary": "I am a mechanist interpretability researcher at EleutherAI, currently working on sparse autoencoders.",
+    "summary": "I am a interpretability researcher at EleutherAI, currently working on sparse autoencoders.",
     "location": {
       "address": "Lisbon, Portugal",
       "postalCode": "",
@@ -25,7 +23,7 @@
   "work": [
     {
       "name": "EleutherAI",
-      "position": "Mechanist Interpretability researcher",
+      "position": "Mechanistic Interpretability researcher",
       "url": "https://eleuther.ai",
       "startDate": "2024-07-01",
       "summary": "Working on sparse autoencoders and automated interpretability.",
@@ -86,33 +84,21 @@
   "interests": [
     {
       "name": "Interpretability",
-      "icon": "fa-solid fa-tag",
       "keywords": [
         "Sparse Autoencoders",
         "Automated Interpretability"
       ]
     }
   ],
-  "references": [
-    {
-      "name": "",
-      "icon": "",
-      "reference": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "reference": ""
-    }
-  ],
+ 
   "projects": [
     {
-      "name": "",
-      "summary": "",
-      "highlights": ["", ""],
-      "startDate": "",
+      "name": "Automated Interpretability Repository",
+      "summary": "A repository for automated interpretability of sparse autoencoders.",
+      "highlights": ["Sparse Autoencoders", "Automated Interpretability"],
+      "startDate": "2024-10-01",
       "endDate": "",
-      "url": ""
+      "url": "https://github.com/EleutherAI/sae-auto-interp"
     }
   ]
 }
