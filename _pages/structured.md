@@ -1,13 +1,14 @@
 ---
 layout: default
 permalink: /blog/
-title: blog
+title: structured
 nav: true
 nav_order: 1
+nav_name: blog
 pagination:
   enabled: true
   collection: posts
-  permalink: /page/:num/
+  permalink: /blog/page/:num/
   per_page: 5
   sort_field: date
   sort_reverse: true

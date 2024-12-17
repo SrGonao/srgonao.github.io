@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>EleutherAI</a>. 
+subtitle:
 
 profile:
   align: right
@@ -11,11 +11,11 @@ profile:
   more_info: >
     <p>goncalo.paulo@eleuther.ai</p>
 
-news: true # includes a list of news items
+news: false # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
 Interpretability researcher at EleutherAI.
 
-I did a PhD in Theoretical and Applied Mechanics at Sapienza University of Rome, Italy.
+I have a PhD in Theoretical and Applied Mechanics from Sapienza University of Rome, Italy.
