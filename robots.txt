@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://srgonao.github.io/sitemap.xml
+Sitemap: srgonao.github.io/sitemap.xml
