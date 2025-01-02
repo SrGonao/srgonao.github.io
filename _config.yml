@@ -92,6 +92,14 @@ lsi: false # produce an index for related posts
 # Pagination
 pagination:
   enabled: true
+  debug: true   # Add this to see more detailed pagination info
+  title: ':title - page :num'
+  per_page: 5
+  sort_field: date
+  sort_reverse: true
+  trail:
+    before: 1
+    after: 3
 
 related_blog_posts:
   enabled: true
@@ -145,14 +153,12 @@ newsletter:
 # -----------------------------------------------------------------------------
 
 collections:
-  news:
-    defaults:
-      layout: post
+  posts:
     output: true
-    permalink: /:collection/:title/
+    permalink: /blog/:title/
   daily:
     output: true
-    permalink: /daily/:year/:month:/:day/:title/
+    permalink: /daily/:year/:month/:day/:title/
   projects:
     output: true
     permalink: /:collection/:title/

@@ -1,10 +1,10 @@
 ---
 layout: default
-permalink: /daily/
+permalink: /daily
 title: daily
 nav: true
-nav_name: daily      # This will show in the navigation bar
 nav_order: 2
+nav_name: daily
 pagination:
   enabled: true
   collection: daily
@@ -17,15 +17,21 @@ pagination:
     after: 3
 ---
 
+<p>Debug daily:</p>
+<pre>
+Site daily posts: {{ site.daily | size }}
+Paginator posts: {{ paginator.posts | size }}
+</pre>
 
 <div class="post">
   <div class="header-bar">
-    <h1>Daily Posts</h1>
-    <h2>Quick thoughts and daily updates</h2>
+    <h1>Research Journal</h1>
+    <h2>Daily updates on my research. Posts may be incoherent and wrong.</h2>
   </div>
 
   <ul class="post-list">
-    {% raw %}{% for post in paginator.documents %}
+    {% assign daily_posts = site.daily | sort: 'date' | reverse %}
+    {% for post in daily_posts %}
       <li>
         <h3>
           <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -35,10 +41,11 @@ pagination:
         </p>
         {{ post.content }}
       </li>
-    {% endfor %}{% endraw %}
+    {% endfor %}
   </ul>
 
-  {% raw %}{% if page.pagination.enabled %}
+  {% if paginator.total_pages > 1 %}
     {% include pagination.liquid %}
-  {% endif %}{% endraw %}
+  {% endif %}
 </div>
+
