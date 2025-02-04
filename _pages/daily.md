@@ -1,9 +1,9 @@
 ---
 layout: default
 permalink: /daily
-title: daily
+title: journal
 nav: true
-nav_order: 2
+nav_order: 1
 nav_name: daily
 pagination:
   enabled: true
@@ -17,11 +17,6 @@ pagination:
     after: 3
 ---
 
-<p>Debug daily:</p>
-<pre>
-Site daily posts: {{ site.daily | size }}
-Paginator posts: {{ paginator.posts | size }}
-</pre>
 
 <div class="post">
   <div class="header-bar">
@@ -30,22 +25,24 @@ Paginator posts: {{ paginator.posts | size }}
   </div>
 
   <ul class="post-list">
-    {% assign daily_posts = site.daily | sort: 'date' | reverse %}
-    {% for post in daily_posts %}
-      <li>
-        <h3>
-          <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </h3>
-        <p class="post-meta">
-          {{ post.date | date: '%B %d, %Y' }}
-        </p>
-        {{ post.content }}
-      </li>
-    {% endfor %}
+    {% if paginator.posts.size > 0 %}
+      {% for post in paginator.posts %}
+        <li>
+          <h3>
+            <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h3>
+          <p class="post-meta">
+            {{ post.date | date: '%B %d, %Y' }}
+          </p>
+          {{ post.content }}
+        </li>
+      {% endfor %}
+    {% else %}
+      <li><p>No blog posts yet.</p></li>
+    {% endif %}
   </ul>
 
   {% if paginator.total_pages > 1 %}
     {% include pagination.liquid %}
   {% endif %}
 </div>
-

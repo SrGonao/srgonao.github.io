@@ -16,6 +16,6 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Interpretability researcher at EleutherAI.
+Interpretability researcher at [EleutherAI](https://eleuther.ai).
 
 I have a PhD in Theoretical and Applied Mechanics from Sapienza University of Rome, Italy.

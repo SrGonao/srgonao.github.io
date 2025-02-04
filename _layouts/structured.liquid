@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div class="post">
+  <div class="header-bar">
+    <h1>Structured Posts</h1>
+    <h2>More polished and complete thoughts on my research.</h2>
+  </div>
+
+  <ul class="post-list">
+    {% if paginator.posts.size > 0 %}
+      {% for post in paginator.posts %}
+        <li>
+          <h3>
+            <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h3>
+          <p class="post-meta">
+            {{ post.date | date: '%B %d, %Y' }}
+          </p>
+          {{ post.content }}
+        </li>
+      {% endfor %}
+    {% else %}
+      <li><p>No blog posts yet.</p></li>
+    {% endif %}
+  </ul>
+
+  {% if paginator.total_pages > 1 %}
+    {% include pagination.liquid %}
+  {% endif %}
+</div>

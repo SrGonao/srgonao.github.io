@@ -153,12 +153,12 @@ newsletter:
 # -----------------------------------------------------------------------------
 
 collections:
-  posts:
+  structured:
     output: true
-    permalink: /blog/:title/
+    permalink: /structured/:title/
   daily:
     output: true
-    permalink: /daily/:year/:month/:day/:title/
+    permalink: /daily/:title/
   projects:
     output: true
     permalink: /:collection/:title/
